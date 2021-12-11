@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  EvaluationTest
+
+  Created by Inglab on 11/12/2021.
+  Copyright © 2021 Inglab. All rights reserved.
+*/
+
+
+
+"WeatherListViewController_Title" = "Weather Forecast";
+"CityNotFoundError" = "City not found";
+"UnknownError" = "Unknown Error";
+"NoData" = "No Data";
+"ShortNameError" = "City name must be from 3 characters or above";

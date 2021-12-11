@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ybk-ze-Yqa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kA8-x3-qfL">
+            <objects>
+                <navigationController id="ybk-ze-Yqa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="uAe-fK-W3y"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QHa-r5-d2S">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1wD-yA-KXn" kind="relationship" relationship="rootViewController" id="PTq-Co-lyO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8y5-9G-3I1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2413" y="120"/>
+        </scene>
+        <!--Weather List View Controller-->
+        <scene sceneID="xLf-Fj-LQg">
+            <objects>
+                <viewController storyboardIdentifier="WeatherListViewController" id="1wD-yA-KXn" customClass="WeatherListViewController" customModule="NAB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Izx-fq-zfq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9JS-w2-b5c">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3OG-eG-FVD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1wD-yA-KXn" id="fac-Xg-rds"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3OG-eG-FVD" firstAttribute="top" secondItem="LQs-qB-1GC" secondAttribute="top" id="F9x-5K-vRz"/>
+                            <constraint firstItem="3OG-eG-FVD" firstAttribute="trailing" secondItem="LQs-qB-1GC" secondAttribute="trailing" id="Pku-X6-S2P"/>
+                            <constraint firstItem="9JS-w2-b5c" firstAttribute="top" secondItem="3OG-eG-FVD" secondAttribute="bottom" id="WGa-aZ-l9s"/>
+                            <constraint firstItem="9JS-w2-b5c" firstAttribute="leading" secondItem="LQs-qB-1GC" secondAttribute="leading" id="nL5-Jm-0a5"/>
+                            <constraint firstItem="3OG-eG-FVD" firstAttribute="leading" secondItem="LQs-qB-1GC" secondAttribute="leading" id="qVP-j7-JjK"/>
+                            <constraint firstItem="9JS-w2-b5c" firstAttribute="trailing" secondItem="LQs-qB-1GC" secondAttribute="trailing" id="xQg-N5-pJg"/>
+                            <constraint firstItem="LQs-qB-1GC" firstAttribute="bottom" secondItem="9JS-w2-b5c" secondAttribute="bottom" id="zCy-KJ-jbs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LQs-qB-1GC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="4LQ-8z-ZsM"/>
+                    <navigationItem key="navigationItem" id="zKh-jb-EQ2"/>
+                    <connections>
+                        <outlet property="searchBar" destination="3OG-eG-FVD" id="ydE-Vr-h3o"/>
+                        <outlet property="tableView" destination="9JS-w2-b5c" id="ld6-N1-1cH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9y-md-uyG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1423" y="113"/>
+        </scene>
+    </scenes>
+</document>
