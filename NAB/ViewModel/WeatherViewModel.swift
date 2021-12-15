@@ -30,7 +30,7 @@ class WeatherViewModel :ViewModel {
         self.date = "Date:   \(DateUtils.convertTimeStampToDate(weather.dt))"
         
         let avarageTemp = (weather.temp.day + weather.temp.night + weather.temp.morn + weather.temp.eve) / 4
-        var averageTemperatureText = "Average Tempurature:   \(Int(avarageTemp))"
+        var averageTemperatureText = "Average Tempurature:   \(Int(round(avarageTemp)))"
         switch unit {
         case .Default:
             averageTemperatureText += "°K"
@@ -51,7 +51,6 @@ class WeatherViewModel :ViewModel {
     
     deinit {
         // doing stuff here whether controller is being deinitialized
-        
         NSLog("deinit WeatherViewModel")
     }
     

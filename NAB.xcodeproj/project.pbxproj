@@ -198,18 +198,10 @@
 		3693AFB72764F0CB004F9DAA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3693AFB82764F0CC004F9DAA /* xib */,
 				3693AFB92764F0CC004F9DAA /* Cells */,
 				3693AFBC2764F0CC004F9DAA /* Main.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		3693AFB82764F0CC004F9DAA /* xib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = xib;
 			sourceTree = "<group>";
 		};
 		3693AFB92764F0CC004F9DAA /* Cells */ = {
