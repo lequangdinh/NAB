@@ -13,4 +13,4 @@ b. Code folder structure:
 No third library is being used.
 
 c. Just run the application 
-d. Checklist of item has done : 1, 2, 3, 4, 5, 6, 10 (of Expected Outputs) 
+d. Checklist of item has done : 1, 2, 3, 4, 6, 10 (of Expected Outputs) 
